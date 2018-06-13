@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>netstandard1.6;net46</TargetFrameworks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Title>Unofficial Telegram client API library</Title>
+    <Version>0.1.0</Version>
+    <PackageId>TelegramClientApi</PackageId>
+    <Authors>Viktor Borisov</Authors>
+    <Company />
+    <Product>Unoffician Telegram client api library</Product>
+    <Description>This is a unofficial Telegram client api library</Description>
+    <PackageTags>telegram api client</PackageTags>
+    <PackageProjectUrl>https://github.com/vik-borisov/TelegramClient</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/vik-borisov/TelegramClient</RepositoryUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="BarsGroup.CodeGuard">
+      <Version>3.2.43</Version>
+    </PackageReference>
+    <PackageReference Include="Castle.Windsor" Version="4.1.0" />
+    <PackageReference Include="Fody" Version="2.3.25" />
+    <PackageReference Include="log4net">
+      <Version>2.0.8</Version>
+    </PackageReference>
+    <PackageReference Include="NETStandard.Library" Version="1.6.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
+    <PackageReference Include="NullGuard.Fody" Version="1.6.3" />
+    <PackageReference Include="OpenTl.Schema" Version="0.73.40" />
+    <PackageReference Include="System.ComponentModel.EventBasedAsync" Version="4.3.0" />
+    <PackageReference Include="System.Security.Cryptography.Algorithms" Version="4.3.1" />
+    <PackageReference Include="System.ValueTuple" Version="4.4.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="IoC" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System" />
+  </ItemGroup>
+</Project>
