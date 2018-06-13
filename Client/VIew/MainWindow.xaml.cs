@@ -27,10 +27,22 @@ namespace Client.VIew
     public partial class MainWindow : Window
     {
         ITelegramClient client;
-        TUser _user;
+        private TUser _user;
+
+        HomeControl          homeView;
+        AuthorizationControl authVIew;
+
         public MainWindow()
         {
             InitializeComponent();
+
+            authVIew = new AuthorizationControl();
+            authVIew.AuthorizationIsPassed += () => ShowContent(true);
+
+            homeView = new HomeControl();
+
+            
+
             ((MainViewModel)this.DataContext).ClientIsAuthorized += ShowContent;
 
 
@@ -39,9 +51,9 @@ namespace Client.VIew
 
         private void ShowContent(bool isAuth)
         {
-            if (isAuth) contentControl.Content = new HomeControl();
+            if (isAuth) contentControl.Content = homeView;
 
-            else contentControl.Content = new AuthorizationControl();
+            else contentControl.Content = authVIew;
         }
 
         public async void Connect()

@@ -21,6 +21,7 @@ namespace Client.VIew
     /// </summary>
     public partial class AuthorizationControl : UserControl
     {
+        public event Action AuthorizationIsPassed;
         public AuthorizationControl()
         {
             InitializeComponent();
@@ -29,7 +30,7 @@ namespace Client.VIew
 
             dataContext.AuthIsStarted += ShowPhonePannel;
             dataContext.CodeIsSended += ShowCodePannel;
-
+            dataContext.AuthIsSuccessful += () => AuthorizationIsPassed?.Invoke();
         }
 
         private void ReturnPhonePannel_Click(object sender, RoutedEventArgs e)
